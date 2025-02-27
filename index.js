@@ -67,7 +67,7 @@ app.get("/edit/:id", (req, res) => {
     const post = posts[postId];
    
     if (post) {
-        res.render("edit.ejs", { title: post.title, content: post.content, postId: postId });
+        res.render("edit.ejs", { title: post.title, content: post.content, postId: postId, author: post.author });
     } else {
         res.status(404).send("Post not found");
     }
@@ -79,6 +79,7 @@ app.post("/edit_post/:id", (req, res) => {
     if (postId >= 0 && postId < posts.length) {
         // Get the existing post
         const updatedPost = {
+            author: req.body.author,
             title: req.body.title,
             content: req.body.content,
             date: getFormattedDate() // Update the timestamp

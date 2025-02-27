@@ -18,11 +18,7 @@
                     <div class="post-card">
                         <h4><%= post.date %></h4> <!-- Use the stored date -->
                         <h2><%= post.title %></h2>
-<<<<<<< HEAD
-                        
-=======
                         <p><%= post.content.replace(/<br\s*\/?>/g, " ").split(" ").slice(0, 50).join(" ") %>...</p>
->>>>>>> 3e6065b (Updated blog post section)
                         <div class="author">
                             <span>By: <%= post.author %> </span>
                             <a href="/post/<%= index %>"><h5>Read More</h5></a>

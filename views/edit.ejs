@@ -1,8 +1,10 @@
 <%- include("partials/header.ejs") %>
 
 <div class="container">
-    <h2 class="section-title">Update Post</h2>
     <form action="/edit_post/<%= postId %>" method="post" class="form">
+        <label for="author">Author :</label>
+        <input type="text" name="author" value="<%= author %>" placeholder="Author">
+
         <label for="title">Title :</label>
         <input type="text" name="title" value="<%= title %>" placeholder="Title">
 
