@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+<div class="viewpost-container">
+    <div class="viewpost">
+        
+        <div class="viewpost-info">
+            <h2><%= title %></h2>
+            <p><%- content %></p>
+        </div>
+
+        <div class="btn-group">
+            <a href="/edit/<%= postId %>"><button class="post-btn"><i class="fa-solid fa-pen-to-square"></i>Edit</button></a>
+            <a href="/delete/<%= postId %>"><button class="post-btn"><i class="fa-solid fa-trash"></i>Delete</button></a>
+        </div>
+    </div>
+    
+    
+</div>

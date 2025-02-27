@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <form action="/edit_post/<%= postId %>" method="post" class="form">
+        <label for="title">Title :</label>
+        <input type="text" name="title" value="<%= title %>" placeholder="Title">
+
+        <label for="content">Content :</label>
+        <textarea name="content" id="content" placeholder="Write your content..."><%= content.replace(/<br\s*\/?>/g, '\n') %></textarea>
+
+        <input type="submit" value="Update Post" class="post-btn">
+    </form>
+    
+</div>

@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span>THE BLOG</span>
+            <h1>Discover Insights, Stories, and Ideas That Inspire.</h1>
+            <p> Stay updated with the latest trends, tips, and opinions from experts across various domains.</p>
+            <a href="/new_post"><button class="post-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i>New Post</button></a>
+        </div>
+    </section>
+
+    <section class="post-container">
+        
+        <div class="post-grid">
+
+            <% if (typeof posts !== "undefined" && posts.length > 0) { %>
+               <% posts.forEach((post, index) => { %>
+                    <div class="post-card">
+                        <h4><%= post.date %></h4> <!-- Use the stored date -->
+                        <h2><%= post.title %></h2>
+                        <p><%= post.content.replace(/<br\s*\/?>/g, " ").split(" ").slice(0, 100).join(" ") %>...</p>
+                        <div class="author">
+                            <span>By: <%= post.author %> </span>
+                            <a href="/post/<%= index %>"><h5>Read More</h5></a>
+                        </div>
+                    </div>
+               <% }) %>
+            <% } %>
+            
+        </div>
+    </section>
+</body>
+</html>
