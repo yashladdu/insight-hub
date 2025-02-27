@@ -23,7 +23,6 @@ function getFormattedDate() {
 }
 
 app.get("/", (req, res) => {
-    console.log("Current Posts Array:", posts); // Debugging
     res.render("index.ejs", {
         posts: posts,
     });
@@ -69,7 +68,6 @@ app.get("/edit/:id", (req, res) => {
    
     if (post) {
         res.render("edit.ejs", { title: post.title, content: post.content, postId: postId });
-        console.log(post);
     } else {
         res.status(404).send("Post not found");
     }

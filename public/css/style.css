@@ -3,13 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8vh;
+    height: 7vh;
     background-color: #f7f4f2;
+    
 }
 
 nav span {
@@ -17,6 +19,7 @@ nav span {
     font-weight: 600; 
     font-family: "Lora", serif;
     font-style: italic;
+    color: #000;
 }
 
 .hero {
@@ -85,13 +88,13 @@ nav span {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem 8rem;
+    padding: 4rem;
 }
 
 .post-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
 }
 
 .post-card {
@@ -99,7 +102,7 @@ nav span {
     flex-direction: column;
     gap: 1rem;
     background-color: #f7f4f2;
-    padding: 2rem;
+    padding: 1rem;
     box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.15)
 }
 
@@ -117,6 +120,7 @@ nav span {
 .author {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .post-card h2 {
@@ -148,7 +152,6 @@ nav span {
 }
 .section-title {
     text-align: center;
-    margin-bottom: 18px;
     font-size: 30px;
     font-style: italic;
     font-family: "Lora", serif;
@@ -158,10 +161,11 @@ nav span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 92vh;
+    height: 93vh;
 }
 
 .form {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     width: 900px;
@@ -206,7 +210,7 @@ nav span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 8vh);
+    min-height: calc(100vh - 7vh);
     padding: 5rem;
     margin-top: 20px;
 }
@@ -214,8 +218,8 @@ nav span {
 .viewpost {
     background-color: #f7f4f2;
     display: grid;
-    grid-template-columns: minmax(400px, 900px);
-    grid-template-rows: minmax(400px, auto);
+    grid-template-columns: minmax(350px, 900px);
+    grid-template-rows: minmax(350px, auto);
     padding: 2rem;
     box-shadow:  0 6px 20px 0 rgba(0, 0, 0, 0.15);
 }
@@ -289,11 +293,14 @@ nav span {
 
 @media(max-width: 600px) {
     nav span {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
+    }
+    .hero{
+        height: 35vh;
     }
     .hero-content {
-        padding: 25px;
-        width: 500px;
+        padding: 10px;
+        width: 350px;
     }
     .hero-content span {
         font-size: 15px;
@@ -312,15 +319,16 @@ nav span {
         height: 3rem;
     
     }
+    .post-container {
+        padding: 2rem;
+    }
 
     .post-card h2 {
         font-size: 1.6rem;
-        
     }
     
     .post-card p { 
         font-size: 1rem;
-        text-align: justify;
     }
     
     .post-card h5 {
@@ -330,40 +338,38 @@ nav span {
     }
 
     .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 92vh;
+        padding: 0 1rem;
     }
 
     .form {
-        width: 500px;
+        padding: 10px;
+        width: 350px;
         height: 800px;
     }
     
     .form label {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-bottom: 10px;
     }
     
     .form input {
         width: 100%;
-        padding: 12px 20px;
-        font-size: 1.2rem;
-        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
         border: 2px solid black;
     }
     
     .form textarea {
         width: 100%;
         height: 600px;
-        padding: 12px 20px;
-        font-size: 1.2rem;
+        padding: 10px;
+        font-size: 0.9rem;
     }
     
     .form .post-btn {
         margin-top: 20px;
+        padding: 5px;
         width: 100%;
     }
     .viewpost-container {
@@ -386,7 +392,7 @@ nav span {
     }
 
     .viewpost-info p {
-        text-align: justify;
+        font-size: 1rem;
     }
 
     .btn-group {
